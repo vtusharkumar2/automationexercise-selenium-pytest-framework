@@ -25,6 +25,11 @@ def driver():
     driver.quit()
 
 
+import os
+import base64
+import pytest
+from datetime import datetime
+
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     outcome = yield
@@ -35,17 +40,20 @@ def pytest_runtest_makereport(item, call):
 
         if report.failed and driver:
             timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-            screenshot_name = f"{item.name}_{timestamp}.png"
-            screenshot_path = os.path.join("screenshots", screenshot_name)
+
+            # 🔥 Create folder if not exists
+            os.makedirs("screenshots", exist_ok=True)
+
+            screenshot_path = f"screenshots/{item.name}_{timestamp}.png"
 
             driver.save_screenshot(screenshot_path)
 
-            # 🔥 FIX: embed image
+            # 🔥 Embed screenshot into HTML report
             with open(screenshot_path, "rb") as image_file:
                 encoded = base64.b64encode(image_file.read()).decode()
 
             extra = getattr(report, "extras", [])
             extra.append(pytest_html.extras.image(encoded, mime_type="image/png"))
-            report.extras=extra
+            report.extras = extra
 
 
