@@ -1,0 +1,566 @@
+{
+  "info": {
+    "_postman_id": "6c842a56-f498-40a2-be6e-37ae0c417a08",
+    "name": "AutomationExercise-API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49599803",
+    "_collection_link": "https://go.postman.co/collection/49599803-6c842a56-f498-40a2-be6e-37ae0c417a08?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "API 1: Get All Products List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 2: POST To All Products List",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 3: Get All Brands List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/brandsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "brandsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 4: PUT To All Brands List",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/brandsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "brandsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 5: POST To Search Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "search_product",
+              "value": "top",
+              "type": "text",
+              "uuid": "f29cd34c-6fa6-474a-8c5e-ddcdf6196626"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 6: POST To Search Product without search_product parameter",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 7: POST To Verify Login with valid details",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "vtusharkumar1010312@gmail.com",
+              "type": "text",
+              "uuid": "538e03de-cc02-4b25-aa57-a8f19baa22bb"
+            },
+            {
+              "key": "password",
+              "value": "qwerty123",
+              "type": "text",
+              "uuid": "6cf28361-5d62-4d98-9ab8-275003f224ac"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 8: POST To Verify Login without email parameter",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "qwerty123",
+              "type": "text",
+              "uuid": "e9bd723a-2899-412e-98b8-22d5fb81e9b0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 9: DELETE To Verify Login",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "API 10: POST To Verify Login with invalid details",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "vtusharkumar@gmail.com",
+              "type": "text",
+              "uuid": "019f0109-cc15-4f14-bb1c-399e210ce3ca"
+            },
+            {
+              "key": "password",
+              "value": "qwerty12",
+              "type": "text",
+              "uuid": "d05aea64-444a-4825-8623-9b0d711b27ae"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 11: POST To Create/Register User Account",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Tushar kumar",
+              "type": "text",
+              "uuid": "260bf6a4-78ba-4726-825b-891fcfed9e21"
+            },
+            {
+              "key": "email",
+              "value": "vtusharkumar213123@gmail.com",
+              "type": "text",
+              "uuid": "cdd87cc9-82e5-4c23-acea-f3c1acf6946a"
+            },
+            {
+              "key": "password",
+              "value": "qwerty123",
+              "type": "text",
+              "uuid": "4dab39a6-15ef-4c68-a480-8f5c7bbfe5d2"
+            },
+            {
+              "key": "title",
+              "value": "Mr.",
+              "type": "text",
+              "uuid": "0bb7dcca-f20c-4499-bf9c-e976612a928c"
+            },
+            {
+              "key": "birth_date",
+              "value": "19",
+              "type": "text",
+              "uuid": "54e74dcf-887b-477a-b929-e143b1ce29db"
+            },
+            {
+              "key": "birth_month",
+              "value": "10",
+              "type": "text",
+              "uuid": "be2df19d-7239-4f90-af9f-73ae276166ed"
+            },
+            {
+              "key": "birth_year",
+              "value": "2004",
+              "type": "text",
+              "uuid": "034acdb5-45bd-4419-b791-e14f10ea57ae"
+            },
+            {
+              "key": "firstname",
+              "value": "Tushar",
+              "type": "text",
+              "uuid": "3948072a-9da0-4fef-a35b-66810e61c3de"
+            },
+            {
+              "key": "lastname",
+              "value": "kumar",
+              "type": "text",
+              "uuid": "41c9962f-9132-43a6-a999-a80278ff511b"
+            },
+            {
+              "key": "company",
+              "value": "webyalaya",
+              "type": "text",
+              "uuid": "2c2cf69c-b983-4455-9d91-0d7a31fb51c6"
+            },
+            {
+              "key": "address1",
+              "value": "12/7 htype khamaria",
+              "type": "text",
+              "uuid": "b1764782-aa21-4e17-b17b-4b1da8e96498"
+            },
+            {
+              "key": "address2 ",
+              "value": "NA",
+              "type": "text",
+              "uuid": "ff34ce43-bc06-4431-b58b-0d10a5481682"
+            },
+            {
+              "key": "country",
+              "value": "India",
+              "type": "text",
+              "uuid": "fce7e8b6-f806-4036-b222-b2786fe8313d"
+            },
+            {
+              "key": "zipcode",
+              "value": "482005",
+              "type": "text",
+              "uuid": "172ecac8-c7e2-4450-b35b-9a9e95a6edec"
+            },
+            {
+              "key": "state",
+              "value": "madhya pradesh",
+              "type": "text",
+              "uuid": "68c190ee-20ea-4257-8821-a900ed46bba4"
+            },
+            {
+              "key": "city",
+              "value": "jabalpur",
+              "type": "text",
+              "uuid": "f0a964b2-a224-41ee-87a5-383377848d33"
+            },
+            {
+              "key": "mobile_number",
+              "value": "8435913975",
+              "type": "text",
+              "uuid": "e6125c74-e6ea-41e6-aa25-9bdf5cdfdf5e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/createAccount",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "createAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 12: DELETE METHOD To Delete User Account",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "API 13: PUT METHOD To Update User Account",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "rishab",
+              "type": "text",
+              "uuid": "69db09a0-a6a4-4246-99e0-d6490c30883e"
+            },
+            {
+              "key": "email",
+              "value": "vtusharkumar1010312@gmail.com",
+              "type": "text",
+              "uuid": "d7c213f6-cfea-4e9d-8ee8-ac7194f7d07c"
+            },
+            {
+              "key": "password",
+              "value": "qwerty123",
+              "type": "text",
+              "uuid": "6f2782a7-57f4-4aec-a038-7dda9a806699"
+            },
+            {
+              "key": "title",
+              "value": "Mr.",
+              "type": "text",
+              "uuid": "3722365e-2f80-471e-86e0-56ce119ed4b0"
+            },
+            {
+              "key": "birth_date",
+              "value": "21",
+              "type": "text",
+              "uuid": "537ebb66-8348-4802-aa4b-6be0e212de88"
+            },
+            {
+              "key": "birth_month",
+              "value": "4",
+              "type": "text",
+              "uuid": "cb16762e-d155-42aa-8980-3d3c3adff86b"
+            },
+            {
+              "key": "birth_year",
+              "value": "2000",
+              "type": "text",
+              "uuid": "fb045ee9-acd9-4482-8461-b002f0ad0b5b"
+            },
+            {
+              "key": "firstname",
+              "value": "rishab",
+              "type": "text",
+              "uuid": "6e2b2fe2-c5b4-40fe-9d94-7b21e5e84160"
+            },
+            {
+              "key": "lastname",
+              "value": "kumar",
+              "type": "text",
+              "uuid": "8a0cd143-984e-4c0f-b172-69245563fb5d"
+            },
+            {
+              "key": "company",
+              "value": "webyalaya",
+              "type": "text",
+              "uuid": "0bcf2048-9680-4f04-a61a-19bfa87aae12"
+            },
+            {
+              "key": "address1",
+              "value": "12/7 htype khamaria",
+              "type": "text",
+              "uuid": "ae07aec9-7425-4b20-a9b5-025bd4e88961"
+            },
+            {
+              "key": "address2",
+              "value": "NA",
+              "type": "text",
+              "uuid": "fa67d04a-84ab-4a9c-b5bb-f8337b6e05a1"
+            },
+            {
+              "key": "country",
+              "value": "India",
+              "type": "text",
+              "uuid": "dc8e062c-f6a1-464b-b7e0-fa9d57558095"
+            },
+            {
+              "key": "zipcode",
+              "value": "482005",
+              "type": "text",
+              "uuid": "21db44ad-d94a-44ee-94a3-b1c3d33c929b"
+            },
+            {
+              "key": "state",
+              "value": "mp",
+              "type": "text",
+              "uuid": "ffa33b1d-a17a-496d-bd20-f19816b9e456"
+            },
+            {
+              "key": "city",
+              "value": "jabalpur",
+              "type": "text",
+              "uuid": "af2bb511-60b9-4861-907a-b8f87ceb1fc8"
+            },
+            {
+              "key": "mobile_number",
+              "value": "7999723231",
+              "type": "text",
+              "uuid": "0b986a56-b53f-4a51-9850-da4d309255b8"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/updateAccount",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "updateAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 14: GET user account detail by email",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/getUserDetailByEmail?email=vtusharkumar1010312@gmail.com",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "getUserDetailByEmail"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "vtusharkumar1010312@gmail.com",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
